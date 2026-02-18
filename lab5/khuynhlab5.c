@@ -35,7 +35,7 @@ int main(void)
 	for (arraycount = 0; arraycount < 10; arraycount++)
 	{
 		//printf("array[%d] = %d \n",arraycount,array[arraycount]);
-		printf("array[%d] address = %p \n",arraycount,array[arraycount]);
+		printf("array[%d] address = %p \n",arraycount,&array[arraycount]);
 
 	}	
 
