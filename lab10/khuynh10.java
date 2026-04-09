@@ -1,4 +1,4 @@
-/Kenny Huynh
+//Kenny Huynh
 //CSC321
 //Lab #10
 
@@ -19,7 +19,7 @@ public class khuynh10
 		
 		double cylindervolume = cylindervol(radius,height);
 
-		System.out.println("\nThe volume is: " + cylindervolume);`
+		System.out.println("\nThe volume is: " + cylindervolume);
 
 	}
 
