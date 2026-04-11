@@ -18,6 +18,12 @@ public class khuynh9
 
 		System.out.println("You have entered " + userinput);
 		
+		while (userinput > 20 || userinput < 1)
+		{
+			System.out.print("You have entered an invalid number!\nPlease enter a number between 1 - 20: ");
+			userinput = input.nextInt();
+		}
+		
 		if(userinput == randomnumber)
 		{
 			int counter = 0;
