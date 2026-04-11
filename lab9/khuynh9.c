@@ -16,8 +16,8 @@ int main(void)
 	int rnumber;
 	bool valid = 0;
 
-	//rnumber = rand() % 20 +1;
-	rnumber = 3;
+	rnumber = rand() % 20 +1;
+	//rnumber = 3;
 
 	printf("Please guess a number between 1 - 20: ");
 
