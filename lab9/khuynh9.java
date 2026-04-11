@@ -18,7 +18,7 @@ public class khuynh9
 
 		System.out.println("You have entered " + userinput);
 		
-		if(userinput == 3)
+		if(userinput == randomnumber)
 		{
 			int counter = 0;
 			while (counter != randomnumber)
@@ -27,6 +27,17 @@ public class khuynh9
 				counter++;
 			}
 		}
-		
+		else if (userinput > randomnumber)
+		{
+			System.out.println("You lost and your guess is higher than my number: " + randomnumber);
+		}
+		else if (userinput < randomnumber)
+		{
+			System.out.println("You lost and your guess is lower than my number: " + randomnumber);
+		}
+		else
+		{
+			System.out.println("THE IF STATEMENT FAILED");
+		}
 	}
 }
