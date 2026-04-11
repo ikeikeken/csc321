@@ -46,11 +46,11 @@ int main(void)
 	}
 	else if (input < rnumber)
 	{
-		printf("You have guessed incorrectly!\nYou lose!\nThe correct answer is higher!");
+		printf("You lose!\nYou guessed lower than the correct answer: %d\n",rnumber);
 	}
 	else
 	{
-		printf("You have guessed incorrectly!\nYou lose!\nThe correct answer is lower!\n");
+		printf("You lose!\nYou guessed higher than the correct answer: %d\n",rnumber);
 	}
 
 }
