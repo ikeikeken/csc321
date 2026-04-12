@@ -1,6 +1,6 @@
 #Kenny Huynh
 #CSC-321
-#Lab 9
+#Lab 8
 
 #Create a Python program with the following requirements.
 
