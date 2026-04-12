@@ -10,9 +10,14 @@
 #Create a for loop to print out a statement multiple times. The statement can be any string of text but try to use a saying or a joke.
 #Create a while loop to print out a statement multiple times. The statement will be your favorite food.
 
-randomnumber = 3
+import random
+
+#randomnumber = 3
+randomnumber = 0;
 counter = 0
 #print(randomnumber)
+
+randomnumber = random.randint(0,9)
 
 print("Please enter a number between 0 - 9: ")
 userinput = int(input())
