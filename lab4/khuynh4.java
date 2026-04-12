@@ -41,7 +41,7 @@ public class khuynh4
 	
 		for (counter = 0; counter < 4; counter++)
 		{
-			if (Menu[counter] == userinput)
+			if (Menu[counter] .equals(userinput))			
 			{
 				System.out.println(Response[counter]);
 			}	
