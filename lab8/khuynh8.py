@@ -31,6 +31,6 @@ elif (userinput == randomnumber):
 for i in range(7):
     print("H3Ll0 w0rLd!")
 
-while (counter := 6):
+while (counter < 6):
     print("Noodles")
-    counter++
+    counter = counter + 1
