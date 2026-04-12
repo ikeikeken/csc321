@@ -12,5 +12,9 @@
 
 randomnumber = 3
 
-print(randomnumber)
+#print(randomnumber)
+
+print("Please enter a number between 0 - 9: ")
+userinput = input()
+print("You have entered:",userinput)
 
