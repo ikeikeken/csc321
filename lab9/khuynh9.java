@@ -8,8 +8,11 @@ public class khuynh9
 {
 	public static void main(String[] args)
 	{
-		int randomnumber = 3;
+		//int randomnumber = 3;
+		int randomnumber;
 		int userinput;
+
+		randomnumber = (int)(Math.random() * 20) + 1;
 
 		System.out.print("Please guess a number between 1 - 20: ");
 		Scanner input = new Scanner(System.in);
