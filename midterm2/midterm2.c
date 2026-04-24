@@ -25,5 +25,6 @@ void printnamenum(int user)
 {
 	char myname[] = "Kenny";
 
-	printf("My name is: %s\n",myname);
+	//printf("My name is: %s\n",myname);
+	printf("%s%d\n",myname,user);
 }
