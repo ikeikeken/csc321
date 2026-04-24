@@ -11,12 +11,21 @@ void printnamenum(int user);
 
 int main (void)
 {
+	int user;
 	//char myname[] = "Kenny";
 
 	//printf("%s\n",myname);
 	//printf("length of name: %lu\n",strlen(myname));
 	
-	printnamenum(1);
+	//printnamenum(1);
+	
+	printf("Please enter a whole number: ");
+	scanf("%d",&user);
+
+	for (int counter = 0; counter <5; counter++)
+	{
+		printnamenum(user);
+	}
 	
 	return EXIT_SUCCESS;
 }
