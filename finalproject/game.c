@@ -363,7 +363,8 @@ int main(int argc, char *argv[])
 					case 1:
 						{
 							room44dice(&playerhealth, &playerwins);
-							break;
+							//return;
+							//break;
 						}
 
 					case 2:
@@ -389,6 +390,7 @@ int main(int argc, char *argv[])
 					case 6:
 						{
 							printf("You gave up");
+							//return;
 							break;
 						}
 
@@ -473,9 +475,10 @@ int main(int argc, char *argv[])
 					{
 				       		printf("Invalid choice. Please enter a correct one. \n");
 					}
+			
+				*/	
+			//	}
 				
-				}
-				*/
 				break;
 			}
 			case 45:
@@ -603,115 +606,9 @@ int main(int argc, char *argv[])
                                 break;
 			}
 			case 68:
-		{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
-{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
-{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
-	{
+			{
+                                        
+                    
                                 puts("room68");
                                 break;
 			}
@@ -729,151 +626,7 @@ int main(int argc, char *argv[])
                         {
                                 puts("room71");
                                 break;
-{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
-{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
-{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
-{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
-                        }
+                       }
 			case 72:
                         {
                                 puts("room72");
@@ -891,150 +644,6 @@ int main(int argc, char *argv[])
                         }
 			case 75:
                         {
-{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
-{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
-{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
-{
-                                                        printf("You have lost all your health!\n");
-                                                        break;
-                                                }
-                                        }
-
-                                        else if (strcmp(playerdicechoice, "observe") == 0)
-
-                                        {
-                                                printf("You observe...\n");
-
-                                                if (playerdiceloss <= 2)
-                                                {
-                                                        printf("Everything looks normal\n");
-                                                }
-                                                else if (playerdiceloss <= 4)
-                                                {
-                                                        printf("You notice the opponents dice always land on even numbers.\n");
-                                                }
-                                                else if (playerdiceloss >=6)
-                                                {
-                                                        printf("THOSE ARE LOADED DICE!!!\n");
-                                                }
-                                                else
-                                                {
-                                                        printf("Something doesn't seem right");
-                                                }
-
-                                        }
-
-                                        else
-
-                                        {
-                                                printf("Invalid choice. Please enter a correct one. \n");
-                                        }
-
                                 puts("room75");
                                 break;
                         }
@@ -1112,7 +721,7 @@ void jsl(void)
 
 void khprinter(void)
 {
-	printf("KDH");
+	printf("KDH\n");
 }
 
 void room44dice(int *playerhealth, int *playerwins)
@@ -1122,6 +731,11 @@ void room44dice(int *playerhealth, int *playerwins)
 	int playerdiceloss = 0;
 	char playerdicechoice[20];
 	
+	printf("\nYou appear into a dimly lit room with nothing but a table in the center with a person standing behind it. The room is to dark for you to see their face put they invite you with gestures to the table. It appears to be a game of dice.");
+	
+	printf("\nThe stranger shows you your dice and theirs. You decide to try it.");
+
+
 	while (*playerhealth > 0)
     {
 	    printf("\nEnter choice: roll / observe / return\n");
@@ -1130,7 +744,8 @@ void room44dice(int *playerhealth, int *playerwins)
 	    if (strcmp(playerdicechoice, "return") == 0) 
 	   
 	    {
-            break;
+		   return;
+		   // break;
 	    }
 	   
 	    else if (strcmp(playerdicechoice, "roll") == 0)
@@ -1161,6 +776,37 @@ void room44dice(int *playerhealth, int *playerwins)
 			    printf("You have lost all your health!\n");
 			    break;
 		    }
+	    }
+	    
+	    else if (strcmp(playerdicechoice, "observe") == 0)
+	    
+	    {
+		    printf("You observe...\n");
+
+		    if (playerdiceloss <= 2)
+
+		    {
+			    printf("Everything looks normal\n");
+		    }
+		    else if (playerdiceloss <= 4)
+
+		    {
+			    printf("You notice the opponents dice always land on even numbers.\n");
+		    }
+		    else if (playerdiceloss >=6)
+
+		    {
+			    printf("THOSE ARE LOADED DICE!!!\n");
+		    }
+		    else
+
+		    {
+			    printf("Something doesn't seem right");
+		    }
+	    }
+	    else
+	    {
+		    printf("Invalid choice. Please enter a correct one. \n");
 	    }
     }
 }
