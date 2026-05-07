@@ -323,10 +323,12 @@ int main(int argc, char *argv[])
 			case 44:
 			{
 				//srand(time(NULL));
+				
+				int inroom44 = 1;
 				int playerhealth = 10;
 				int playerwins = 0;
 				int doorchoice = 0;
-
+				
 				//int playerdice[] = {1, 2, 3, 4, 5, 6};
 				//int npcdice[] = {1, 2, 3, 4, 5, 6};
 				//int npcloadeddice[] = {2, 2, 4, 4, 6, 6};
@@ -342,58 +344,65 @@ int main(int argc, char *argv[])
 				}
 				//puts("\nWelcome to Room  44");
 
-				//choice screen
-				printf("You entered through the door...\n Now there are more doors...\n 5 of them all with different symbols on them.\n Which door will you choose?\n\n\n");
-				printf("+---------------------------+\n");
-				printf("|        DooR Choice        |\n");
-				printf("+---------------------------+\n");
-				printf("|  1. Dice Door             |\n");
-				printf("|  2. Door                  |\n");
-				printf("|  3. Door                  |\n");
-				printf("|  4. Door                  |\n");
-				printf("|  5. Door                  |\n");
-				printf("|  6. Give Up               |\n");
-				printf("+---------------------------+\n");
-				printf("Enter your choice (in number please): ");
-
-				scanf("%d", &doorchoice);
-				
-				switch(doorchoice)
+				while (inroom44)
 				{
-					case 1:
-						{
-							room44dice(&playerhealth, &playerwins);
-							//return;
-							//break;
-						}
+					//choice screen 
+					printf("You entered through the door...\n");
+				        printf("Now there are more doors...\n"); 
+					printf("5 of them all with different symbols on them.\n");
+				        printf("Which door will you choose?\n\n\n");
+					printf("+---------------------------+\n");
+					printf("|        Door Choice        |\n");
+					printf("+---------------------------+\n");
+					printf("|  1. Dice Door             |\n");
+					printf("|  2. Door                  |\n");
+					printf("|  3. Door                  |\n");
+					printf("|  4. Door                  |\n");
+					printf("|  5. Door                  |\n");
+					printf("|  6. Give Up               |\n");
+					printf("+---------------------------+\n");
+					printf("  %d out of 5 wins to leave\n", playerwins);					
+					printf("Enter your choice (in number please): ");				
+					scanf("%d", &doorchoice);
+				
+					switch(doorchoice)
+					{
+						case 1:
+							{
+								room44dice(&playerhealth, &playerwins);
+								break;
+							}
+						case 2:
+							{
 
-					case 2:
-						{
-						
-						}
+							}
 
-					case 3:
-						{
-						
-						}
+						case 3:
+	
+							{
+					
+							}
+						case 4:
+							{
 
-					case 4:
-					       	{
-						
-						}
+							}
 
-					case 5:
-						{
+						case 5:
+			
+							{
 
-						}
+				
+							}
 
-					case 6:
-						{
-							printf("You gave up");
-							//return;
-							break;
-						}
-
+						case 6:
+				
+							{
+					
+								printf("You gave up");
+								inroom44 = 0;
+								break;
+							}
+					}
 				}
 
 				/*
