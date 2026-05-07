@@ -28,6 +28,7 @@ void khprinter(void);
 void room44dice(int *playerhealth, int *playerwins);
 void room44rps(int *playerhealth, int *playerwins);
 void room4421(int *playerhealth, int *playerwins);
+void room44coinflip(int *playerhealth, int *playerwins);
 
 void ANFUN(void);
 void cparkerFun(void);
@@ -366,8 +367,9 @@ int main(int argc, char *argv[])
 					printf("|  1. Dice Door             |\n");
 					printf("|  2. RPS Door              |\n");
 					printf("|  3. Card  Door            |\n");
-					printf("|  4. Door                  |\n");
-					printf("|  5. Door                  |\n");
+					printf("|  4. Coin Door             |\n");
+					printf("|  5. COMING SOON           |\n");
+					printf("|---------------------------|\n");
 					printf("|  6. Give Up               |\n");
 					printf("+---------------------------+\n");
 					printf("%d out of 5 wins to leave (repeating wins ok) \n", playerwins);					
@@ -395,14 +397,16 @@ int main(int argc, char *argv[])
 							}
 						case 4:
 							{
-
+								room44coinflip(&playerhealth, &playerwins);
+								break;
 							}
 
 						case 5:
 			
 							{
 
-				
+								
+								break;
 							}
 
 						case 6:
@@ -1032,6 +1036,105 @@ void room4421(int *playerhealth, int *playerwins)
 
     printf("Health: %d | Wins: %d\n", *playerhealth, *playerwins);
 }
+
+void  room44coinflip(int *playerhealth, int *playerwins)
+{	
+	int playerscore = 0;
+	int npcscore = 0;
+	int playerchoice;
+	int coin;
+	
+	printf("\nA hooded figure pulls out a coin...\n");
+	printf("First to 2 wins.\n");
+      	/*
+	printf("+-------------------------+\n");
+	printf("|          CHOSE          |\n");
+	printf("+-------------------------+\n");
+	printf("| 1.  Heads               |\n"); 
+	printf("|-------------------------|\n");
+	printf("| 2.  Tails               |\n");
+	printf("|-------------------------|\n");
+	printf("| 99, Return              |\n");
+	printf("|_________________________|\n");
+	*/
+
+	while (playerscore < 2 && npcscore <2)
+	{
+		printf("+-------------------------+\n");
+		printf("|          CHOSE          |\n");
+		printf("+-------------------------+\n");
+		printf("| 1.  Heads               |\n"); 
+		printf("|-------------------------|\n");
+		printf("| 2.  Tails               |\n");
+		printf("|-------------------------|\n");
+		printf("| 99, Return              |\n");
+		printf("|_________________________|\n");
+		printf("\nChoose Heads or Tails (numbers only): ");
+		scanf("%d",&playerchoice);
+
+		if (playerchoice == 99)
+		{
+			printf("You chickened out...\n");
+			return;
+		}
+
+		else if (playerchoice != 1 && playerchoice != 2)
+		{
+			printf("Enter a correct choice dummy.\n");
+		}
+
+		else
+		{
+			coin = rand() % 2 + 1;
+
+			printf("The coin lands on...");
+			if (coin == 1)
+			{
+				printf("HEADS\n");
+			}
+
+			else
+			{
+				printf("/TAILS\n");
+			}
+
+			if (playerchoice == coin)
+			{
+				printf("You win this round!\n");
+				playerscore++;
+			}
+
+			else
+			{
+				printf("You loose this round!\n");
+				npcscore++;
+			}
+
+			printf("Score → You: %d | Opponent: %d\n", playerscore, npcscore);
+		}
+	}
+
+	if (playerscore == 2)
+	{
+		printf("You won the match!\n");
+		(*playerwins)++;
+	}
+	
+	else
+	{
+		printf("You lost the match...\n");
+		(*playerhealth)--;
+	}
+	
+	printf("\n");
+	printf("----------------------------\n");
+	printf("Health: %d | Wins: %d\n", *playerhealth, *playerwins);
+	printf("----------------------------\n");
+	printf("You approach a door.\n");
+
+
+}
+
 
 void PogoAM(void)
 {
