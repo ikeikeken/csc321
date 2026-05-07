@@ -26,6 +26,9 @@
 //place function prototypes here
 void khprinter(void);
 void room44dice(int *playerhealth, int *playerwins);
+void room44rps(int *playerhealth, int *playerwins);
+void room4421(int *playerhealth, int *playerwins);
+
 void ANFUN(void);
 void cparkerFun(void);
 void rgarcia_fun(void);
@@ -340,8 +343,14 @@ int main(int argc, char *argv[])
 				if (playerhealth <= 0)
 				{
 					printf("You have lost all your health!\n");
+					printf("You black out...\n You slowly open your eyes again.");
 					break;
 				}
+				else if (playerwins >= 5)
+				{
+					break;
+				}
+
 				//puts("\nWelcome to Room  44");
 
 				while (inroom44)
@@ -355,13 +364,13 @@ int main(int argc, char *argv[])
 					printf("|        Door Choice        |\n");
 					printf("+---------------------------+\n");
 					printf("|  1. Dice Door             |\n");
-					printf("|  2. Door                  |\n");
+					printf("|  2. RPS Door              |\n");
 					printf("|  3. Door                  |\n");
 					printf("|  4. Door                  |\n");
 					printf("|  5. Door                  |\n");
 					printf("|  6. Give Up               |\n");
 					printf("+---------------------------+\n");
-					printf("  %d out of 5 wins to leave\n", playerwins);					
+					printf("%d out of 5 wins to leave (repeating wins ok) \n", playerwins);					
 					printf("Enter your choice (in number please): ");				
 					scanf("%d", &doorchoice);
 				
@@ -374,7 +383,8 @@ int main(int argc, char *argv[])
 							}
 						case 2:
 							{
-
+								room44rps(&playerhealth, &playerwins);
+								break;
 							}
 
 						case 3:
@@ -820,6 +830,113 @@ void room44dice(int *playerhealth, int *playerwins)
     }
 }
 
+void room44rps(int *playerhealth, int *playerwins)
+{
+	int playerscore = 0;
+	int npcscore = 0;
+	int playerchoice;
+	int npcchoice;
+	
+	printf("\nYou approach a shadowy figure with a coke can and cheetos in his hand.\n");
+	printf("They challenge you to Rock Paper Scissors.\n");
+        printf("First to 2 wins leaves victorious.\n");
+
+	while (playerscore < 2 && npcscore < 2)
+	{
+		printf(" \n");
+		printf("+----------------+\n");
+		printf("|      Choose    |\n");
+		printf("+________________+\n");
+		printf("|                |\n");
+		printf("|1. Rock         |\n");
+		printf("|                |\n");
+		printf("|2. Paper        |\n");
+		printf("|                |\n");
+		printf("|3. Scissors     |\n");
+		printf("|                |\n");
+		printf("+----------------+\n");
+
+		printf("Enter Choice (numbers please): ");
+		scanf("%d", &playerchoice);
+
+		npcchoice = rand() % 3 + 1;
+
+		if (playerchoice == 99)
+                {
+			//should not be visable to player.
+                        printf("returning...");
+                        return;
+                }    
+		
+		printf("Shadowy figures chose: ");
+		
+		if (npcchoice == 1)
+		{
+			printf("ROCK\n");
+		}
+		
+		else if (npcchoice == 2)
+       		{
+                        printf("PAPER\n");
+                }
+	       
+		else if (npcchoice == 3)
+        	{
+                        printf("SCISSORS\n");
+                }
+	
+		if (playerchoice == npcchoice)
+		{	
+			printf("Tie!\n");
+	       	}
+		
+		else if ((playerchoice == 1 && npcchoice == 3) || (playerchoice == 2 && npcchoice == 1) || (playerchoice == 3 && npcchoice == 2))
+	       
+		{
+		    	printf("You win this round!\n");
+			playerscore++;
+	       	}
+		else
+	 	{
+	    		printf("You lose this round!\n");
+	    		npcscore++;
+	       	}
+	       
+		printf("Score → You: %d | NPC: %d\n", playerscore, npcscore);
+       	}
+      
+	if (playerscore == 2)
+       	{
+	       	printf("\nYou won the match!\n");
+	       	(*playerwins)++;
+       	}
+	else
+       	{
+	      	printf("\nYou lost the match...\n");
+	       	(*playerhealth)--;
+       	}
+	
+	printf("Health: %d | Wins: %d\n", *playerhealth, *playerwins);
+}
+
+void room4421(int *playerhealth, int *playerwins)
+{
+	int playertotal = 0;
+	int dealertotal = 0;
+	int choice;
+	
+	printf("\nYou approach a shadowy figure...\n");
+       	printf("They challenge you to BLACK JACK.(VERY SIMPLIFIED)\n");
+       	printf("One game. All of nothing.\n\n");
+
+	playertotal += rand() % 10 + 1;
+	playertotal += rand() % 10 + 1;
+
+	dealertotal += rand() % 10 + 1;
+	dealertotal += rand() % 19 + 1;
+
+
+}
 
 void PogoAM(void)
 {
