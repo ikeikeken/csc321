@@ -365,7 +365,7 @@ int main(int argc, char *argv[])
 					printf("+---------------------------+\n");
 					printf("|  1. Dice Door             |\n");
 					printf("|  2. RPS Door              |\n");
-					printf("|  3. Door                  |\n");
+					printf("|  3. Card  Door            |\n");
 					printf("|  4. Door                  |\n");
 					printf("|  5. Door                  |\n");
 					printf("|  6. Give Up               |\n");
@@ -390,7 +390,8 @@ int main(int argc, char *argv[])
 						case 3:
 	
 							{
-					
+								room4421(&playerhealth, &playerwins);
+								break;
 							}
 						case 4:
 							{
@@ -929,13 +930,107 @@ void room4421(int *playerhealth, int *playerwins)
        	printf("They challenge you to BLACK JACK.(VERY SIMPLIFIED)\n");
        	printf("One game. All of nothing.\n\n");
 
-	playertotal += rand() % 10 + 1;
-	playertotal += rand() % 10 + 1;
+	int playercard1 = rand() % 10 + 1;
+	int playercard2 = rand() % 10 + 1;
+	playertotal = playercard1 + playercard2;
 
-	dealertotal += rand() % 10 + 1;
-	dealertotal += rand() % 19 + 1;
+	int dealercard1 = rand() % 10 + 1;
+	int dealercard2 = rand() % 10 + 1;
+	dealertotal = dealercard1 + dealercard2;
 
+	printf("---------------------\n");
+	printf("Your total: %d\n", playertotal);
+	printf("---------------------\n");
+	//easiest way to reveal 1 card
+	printf("Dealer reveals: %d\n", dealercard1);
+	printf("---------------------\n");
+	
+	//player
+	while (playertotal < 21)
+	{
+		printf("\n");
+		printf("+-------------------------+\n");
+		printf("|          CHOSE          |\n");
+		printf("+-------------------------+\n");
+		printf("|                         |\n");
+		printf("|1. HIT                   |\n");
+		printf("|                         |\n");
+		printf("|2. STAND                 |\n");
+	       	printf("|                         |\n");
+	       	printf("|99. RETURN               |\n");
+	       	printf("|_________________________|\n");
+		printf(" Choice: ");
 
+		scanf("%d", &choice);
+
+		if (choice == 99)
+		{
+			printf("You ran away.");
+			return;
+		}
+		
+		if (choice == 1)
+		{
+			int card = rand() % 10 + 1;
+			playertotal += card;
+
+			printf("You drewl %d\n", card);
+			printf("Your total: %d\n", playertotal);
+
+			if (playertotal >21)
+			{
+				  printf("You busted!\n");
+				  (*playerhealth)--;
+				  printf("You got punched in the face!\n");
+				  printf("You loss 1 health and stumbled to a door.\n");
+				  printf("Health: %d | Wins: %d\n", *playerhealth, *playerwins);
+				  return;
+			}
+		}
+		
+		else if (choice == 2)
+	 	{
+	    		break;
+	       	}
+		
+		else
+	       	{
+	    		printf("Invalid choice.\n");
+		}
+	}
+	
+	//dealr
+	
+	printf("\nDealer's turn...\n");
+	printf("Dealer total: %d\n", dealertotal);
+
+    	while (dealertotal < 18)
+    	{
+		int card = rand() % 10 + 1;
+		dealertotal += card;
+		printf("Dealer draws: %d (Total: %d)\n", card, dealertotal);
+       	}
+
+    //winner
+    if (dealertotal > 21 || playertotal > dealertotal)
+    {
+        printf("\nYou win the game!\n");
+        printf("You victoriously approached a door\n");
+	(*playerwins)++;
+    }
+    else if (playertotal < dealertotal)
+    {
+        printf("\nDealer wins...\n");
+       	printf("You got punched in the face!\n");
+	printf("You loss 1 health and stumbled through a door.\n");
+       	(*playerhealth)--;
+    }
+    else
+    {
+        printf("\nIt's a tie!\n");
+    }
+
+    printf("Health: %d | Wins: %d\n", *playerhealth, *playerwins);
 }
 
 void PogoAM(void)
