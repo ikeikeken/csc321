@@ -1162,7 +1162,7 @@ void  room44coinflip(int *playerhealth, int *playerwins)
 
 			else
 			{
-				printf("/TAILS\n");
+				printf("TAILS\n");
 			}
 
 			if (playerchoice == coin)
