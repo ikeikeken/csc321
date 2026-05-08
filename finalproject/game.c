@@ -384,15 +384,15 @@ int main(int argc, char *argv[])
 					else
 					{
  						printf("+---------------------------+\n");
-					       	printf("|        Door Choice        |\n");
-					       	printf("+---------------------------+\n");
-					       	printf("|  1. Dice Door             |\n");
-					       	printf("|  2. RPS Door              |\n");
-					       	printf("|  3. Card  Door            |\n");
-					       	printf("|  4. Coin Door             |\n");
-					       	printf("|  5. Cups                  |\n");
-					       	printf("|---------------------------|\n");
-					       	printf("|  6. Give Up               |\n");
+						printf("|        Door Choice        |\n");
+						printf("+---------------------------+\n");
+						printf("|  1. Dice Door             |\n");
+						printf("|  2. RPS Door              |\n");
+						printf("|  3. Card  Door            |\n");
+						printf("|  4. Coin Door             |\n");
+						printf("|  5. Cups                  |\n");
+						printf("|---------------------------|\n");
+						printf("|  6. Give Up               |\n");
 						printf("|---------------------------|\n");
 						printf("|  7. Win and Leave         |\n");
 						printf("+---------------------------+\n");
@@ -979,8 +979,8 @@ void room4421(int *playerhealth, int *playerwins)
 	int choice;
 	
 	printf("\nYou approach a shadowy figure...\n");
-       	printf("They challenge you to BLACK JACK.(VERY SIMPLIFIED)\n");
-       	printf("One game. All of nothing.\n\n");
+	printf("They challenge you to BLACK JACK.(VERY SIMPLIFIED)\n");
+	printf("One game. All of nothing.\n\n");
 
 	int playercard1 = rand() % 10 + 1;
 	int playercard2 = rand() % 10 + 1;
@@ -1008,9 +1008,9 @@ void room4421(int *playerhealth, int *playerwins)
 		printf("|1. HIT                   |\n");
 		printf("|                         |\n");
 		printf("|2. STAND                 |\n");
-	       	printf("|                         |\n");
-	       	printf("|99. RETURN               |\n");
-	       	printf("|_________________________|\n");
+		printf("|                         |\n");
+		printf("|99. RETURN               |\n");
+		printf("|_________________________|\n");
 		printf(" Choice: ");
 
 		scanf("%d", &choice);
@@ -1189,16 +1189,16 @@ void room44cups(int *playerhealth, int *playerwins)
 	int guess;
     
 	printf("\nA shadowy figure places a ball under one of three cups...\n");
-    	printf("Pick the correct cup and win.\n");
+	printf("Pick the correct cup and win.\n");
   	printf("1, 2, 3 or 99 to return.\n");
        
 	ballposition = rand() % 3 + 1;   // 1–3
 
 
-    	printf("\n");
+	printf("\n");
 	printf("+-----------+\n");
-       	printf("| 1 | 2 | 3 |\n"); 
-       	printf("+-----------+\n");
+	printf("| 1 | 2 | 3 |\n"); 
+	printf("+-----------+\n");
 	printf("Your guess (in numbers please): ");
 	
 	scanf("%d", &guess);
