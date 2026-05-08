@@ -29,6 +29,7 @@ void room44dice(int *playerhealth, int *playerwins);
 void room44rps(int *playerhealth, int *playerwins);
 void room4421(int *playerhealth, int *playerwins);
 void room44coinflip(int *playerhealth, int *playerwins);
+void room44cups(int *playerhealth, int *playerwins);
 
 void ANFUN(void);
 void cparkerFun(void);
@@ -361,20 +362,46 @@ int main(int argc, char *argv[])
 				        printf("Now there are more doors...\n"); 
 					printf("5 of them all with different symbols on them.\n");
 				        printf("Which door will you choose?\n\n\n");
-					printf("+---------------------------+\n");
-					printf("|        Door Choice        |\n");
-					printf("+---------------------------+\n");
-					printf("|  1. Dice Door             |\n");
-					printf("|  2. RPS Door              |\n");
-					printf("|  3. Card  Door            |\n");
-					printf("|  4. Coin Door             |\n");
-					printf("|  5. COMING SOON           |\n");
-					printf("|---------------------------|\n");
-					printf("|  6. Give Up               |\n");
-					printf("+---------------------------+\n");
-					printf("%d out of 5 wins to leave (repeating wins ok) \n", playerwins);					
-					printf("Enter your choice (in number please): ");				
-					scanf("%d", &doorchoice);
+					
+					if (playerwins <= 4)
+					{
+					
+						printf("+---------------------------+\n");
+						printf("|        Door Choice        |\n");
+						printf("+---------------------------+\n");
+						printf("|  1. Dice Door             |\n");
+						printf("|  2. RPS Door              |\n");
+						printf("|  3. Card  Door            |\n");
+						printf("|  4. Coin Door             |\n");
+						printf("|  5. Cups                  |\n");
+						printf("|---------------------------|\n");			
+						printf("|  6. Give Up               |\n");				
+						printf("+---------------------------+\n");				
+						printf("%d out of 5 wins to leave (repeating wins ok) \n", playerwins);									
+						printf("Enter your choice (in number please): ");								
+						scanf("%d", &doorchoice);
+					}
+					else
+					{
+ 						printf("+---------------------------+\n");
+                                                printf("|        Door Choice        |\n");
+                                                printf("+---------------------------+\n");
+                                                printf("|  1. Dice Door             |\n");
+                                                printf("|  2. RPS Door              |\n");
+                                                printf("|  3. Card  Door            |\n");
+                                                printf("|  4. Coin Door             |\n");
+                                                printf("|  5. Cups                  |\n");
+                                                printf("|---------------------------|\n");
+                                                printf("|  6. Give Up               |\n");
+                                     		printf("|---------------------------|\n");
+						printf("|  7. Win and Leave         |\n");
+					       	printf("+---------------------------+\n");
+                                                printf("%d out of 5 wins to leave (repeating wins ok) \n", playerwins);
+                                                printf("Enter your choice (in number please): ");
+                                                scanf("%d", &doorchoice);
+
+					}
+
 				
 					switch(doorchoice)
 					{
@@ -405,7 +432,7 @@ int main(int argc, char *argv[])
 			
 							{
 
-								
+								room44cups(&playerhealth, &playerwins);
 								break;
 							}
 
@@ -415,6 +442,12 @@ int main(int argc, char *argv[])
 					
 								printf("You gave up");
 								inroom44 = 0;
+								break;
+							}
+						case 7:
+							{
+								printf("\nCongratz!!!! YOU WIN!\n");
+								
 								break;
 							}
 					}
@@ -1135,6 +1168,59 @@ void  room44coinflip(int *playerhealth, int *playerwins)
 
 }
 
+void room44cups(int *playerhealth, int *playerwins)
+{
+	int ballposition;
+	int guess;
+    
+	printf("\nA shadowy figure places a ball under one of three cups...\n");
+    	printf("Pick the correct cup and win.\n");
+  	printf("1, 2, 3 or 99 to return.\n");
+       
+	ballposition = rand() % 3 + 1;   // 1–3
+
+
+    	printf("\n");
+	printf("+-----------+\n");
+       	printf("| 1 | 2 | 3 |\n"); 
+       	printf("+-----------+\n");
+	printf("Your guess (in numbers please): ");
+	
+	scanf("%d", &guess);
+       
+	if (guess == 99)
+    	{
+	    	printf("You step away from the table...\n");
+		return;
+	}
+
+    	if (guess < 1 || guess > 3)
+      	{
+	       	printf("Invalid choice.\n");
+		return;
+       	}
+	
+	printf("The ball was under cup %d.\n", ballposition);
+       
+	if (guess == ballposition)
+    	{
+	    	printf("You guessed correctly!\n");
+		(*playerwins)++;
+	}
+	
+	else
+       	{
+	       	printf("Wrong cup...\n");
+		(*playerhealth)--;
+       	}
+    
+	printf("\n");
+	printf("----------------------------\n");
+	printf("Health: %d | Wins: %d\n", *playerhealth, *playerwins);
+	printf("----------------------------\n");
+	printf("You approach a door.\n");
+
+}
 
 void PogoAM(void)
 {
