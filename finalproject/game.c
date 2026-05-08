@@ -378,9 +378,9 @@ int main(int argc, char *argv[])
 					*/
 
 					printf("You entered through the door...\n");
-				        printf("Now there are more doors...\n"); 
+					printf("Now there are more doors...\n"); 
 					printf("5 of them all with different symbols on them.\n");
-				        printf("Which door will you choose?\n\n\n");
+					printf("Which door will you choose?\n\n\n");
 					
 					if (playerwins <= 4)
 					{
