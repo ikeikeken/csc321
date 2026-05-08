@@ -342,6 +342,8 @@ int main(int argc, char *argv[])
 				
 				khprinter();
 
+				/*
+				
 				if (playerhealth <= 0)
 				{
 					printf("You have lost all your health!\n");
@@ -352,12 +354,29 @@ int main(int argc, char *argv[])
 				{
 					break;
 				}
+				*/
 
 				//puts("\nWelcome to Room  44");
 
 				while (inroom44)
 				{
 					//choice screen 
+					
+					if (playerhealth <= 0)
+					{
+						printf("You have lost all your health!\n");
+						printf("You black out...\n You slowly open your eyes again.");
+						inroom44 = 0;
+						break;
+					}
+                                
+					/*
+					else if (playerwins >= 5)
+					{
+						break;
+					}
+					*/
+
 					printf("You entered through the door...\n");
 				        printf("Now there are more doors...\n"); 
 					printf("5 of them all with different symbols on them.\n");
