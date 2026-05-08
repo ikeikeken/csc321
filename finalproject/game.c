@@ -384,21 +384,21 @@ int main(int argc, char *argv[])
 					else
 					{
  						printf("+---------------------------+\n");
-                                                printf("|        Door Choice        |\n");
-                                                printf("+---------------------------+\n");
-                                                printf("|  1. Dice Door             |\n");
-                                                printf("|  2. RPS Door              |\n");
-                                                printf("|  3. Card  Door            |\n");
-                                                printf("|  4. Coin Door             |\n");
-                                                printf("|  5. Cups                  |\n");
-                                                printf("|---------------------------|\n");
-                                                printf("|  6. Give Up               |\n");
-                                     		printf("|---------------------------|\n");
-						printf("|  7. Win and Leave         |\n");
+					       	printf("|        Door Choice        |\n");
 					       	printf("+---------------------------+\n");
-                                                printf("%d out of 5 wins to leave (repeating wins ok) \n", playerwins);
-                                                printf("Enter your choice (in number please): ");
-                                                scanf("%d", &doorchoice);
+					       	printf("|  1. Dice Door             |\n");
+					       	printf("|  2. RPS Door              |\n");
+					       	printf("|  3. Card  Door            |\n");
+					       	printf("|  4. Coin Door             |\n");
+					       	printf("|  5. Cups                  |\n");
+					       	printf("|---------------------------|\n");
+					       	printf("|  6. Give Up               |\n");
+						printf("|---------------------------|\n");
+						printf("|  7. Win and Leave         |\n");
+						printf("+---------------------------+\n");
+						printf("%d out of 5 wins to leave (repeating wins ok) \n", playerwins);
+						printf("Enter your choice (in number please): ");
+						scanf("%d", &doorchoice);
 
 					}
 
@@ -891,7 +891,7 @@ void room44rps(int *playerhealth, int *playerwins)
 	
 	printf("\nYou approach a shadowy figure with a coke can and cheetos in his hand.\n");
 	printf("They challenge you to Rock Paper Scissors.\n");
-        printf("First to 2 wins leaves victorious.\n");
+	printf("First to 2 wins leaves victorious.\n");
 
 	while (playerscore < 2 && npcscore < 2)
 	{
@@ -916,8 +916,9 @@ void room44rps(int *playerhealth, int *playerwins)
 		if (playerchoice == 99)
                 {
 			//should not be visable to player.
-                        printf("returning...");
-                        return;
+			
+			printf("returning...");
+			return;
                 }    
 		
 		printf("Shadowy figures chose: ");
@@ -929,30 +930,30 @@ void room44rps(int *playerhealth, int *playerwins)
 		
 		else if (npcchoice == 2)
        		{
-                        printf("PAPER\n");
-                }
+			printf("PAPER\n");
+	       	}
 	       
 		else if (npcchoice == 3)
         	{
-                        printf("SCISSORS\n");
-                }
+			printf("SCISSOR\n");
+		}
 	
 		if (playerchoice == npcchoice)
 		{	
 			printf("Tie!\n");
-	       	}
+		}
 		
 		else if ((playerchoice == 1 && npcchoice == 3) || (playerchoice == 2 && npcchoice == 1) || (playerchoice == 3 && npcchoice == 2))
 	       
 		{
-		    	printf("You win this round!\n");
+			printf("You win this round!\n");
 			playerscore++;
-	       	}
+		}
 		else
 	 	{
 	    		printf("You lose this round!\n");
 	    		npcscore++;
-	       	}
+		}
 	       
 		printf("Score → You: %d | NPC: %d\n", playerscore, npcscore);
        	}
